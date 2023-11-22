@@ -16,9 +16,9 @@ services:
       - DB_CONNECTION=mysql
       - DB_HOST=db
       - DB_PORT=3306
-      - DB_DATABASE=laravelminio  
+      - DB_DATABASE=Rayhan0303 
       - DB_USERNAME=root
-      - DB_PASSWORD=080907
+      - DB_PASSWORD=123456
 
   db:
     image: mysql:5.7
@@ -27,8 +27,8 @@ services:
     ports:
       - "3307:3306"
     environment:
-      - MYSQL_DATABASE=laravelminio  
-      - MYSQL_ROOT_PASSWORD=080907
+      - MYSQL_DATABASE=Rayhan0303  
+      - MYSQL_ROOT_PASSWORD=123456
 
   minio:
     image: minio/minio:latest
@@ -40,8 +40,8 @@ services:
     volumes:
       - ./minio-data:/data
     environment:
-      - MINIO_ROOT_USER=anandisaputra
-      - MINIO_ROOT_PASSWORD=anandi12
+      - MINIO_ROOT_USER=Rayhan
+      - MINIO_ROOT_PASSWORD=rayhan33
     command: server --console-address ":9001" /data
 volumes:
   mysql_data:
